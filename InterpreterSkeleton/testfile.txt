@@ -1,0 +1,43 @@
+globalfloat $t
+
+function main params endparams
+float $x
+float $q
+float $c
+float $ten
+= $ten 10
+= $x 5
+= $q .1
+time $c
+* $c $c $q
+* $c $c $q
+% $c $c $ten
+
+callfunction drawsquare args $c $q $q $x $x $c $c endargs
+endfunction
+
+
+function testop params $p1 $p2 endparams
+jumpif l1 $b1
+jump l2
+label test
+print $b1
+print $i1
+bool $b1
+float $i1
+time $f1
+= $b1 $b2
+= $b1 TRUE 
+= $i1 100
+&& $b1 $b2 $b3
+|| $b1 $b2 $b3
+! $b1 $b2
+> $b1 $i1 $i2
+>= $b1 $i1 $i2
+== $b1 $i1 $i2
++ $i1 $i2 $i3
+- $i1 $i2 $i3
+* $i1 $i2 $i3
+/ $i1 $i2 $i3
+callfunction drawsquare args $i1 $i2 $i3 $i4 $i5 $i6 $i7 endargs
+endfunction
